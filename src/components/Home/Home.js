@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Row, Container } from "react-bootstrap";
 // import { AgentActions } from "../../../store/actions";
 import { connect } from "react-redux";
 // import * as EmailValidator from 'email-validator'
@@ -8,6 +7,7 @@ import { connect } from "react-redux";
 // import { SpinnerDark } from "../../../assets/img";
 import "./Home.scss";
 import { Link } from "react-router-dom";
+import NavHeader from "../../shared/Header";
 
 // let connectProps = {
 //   // ...AgentActions
@@ -18,6 +18,25 @@ import { Link } from "react-router-dom";
 // });
 
 // let enhancer = connect(connectState, connectProps);
+
+import logo from "../../logo.svg";
+
+import {
+  Row,
+  Col,
+  Container,
+  Badge,
+  Button,
+  ButtonGroup,
+  Navbar,
+  Nav,
+  ToggleButton,
+  Card,
+  Dropdown,
+  Jumbotron,
+  DropdownButton
+} from "react-bootstrap";
+// import "./App.css";
 
 class HomePage extends Component {
   constructor(props) {
@@ -100,90 +119,18 @@ class HomePage extends Component {
     const { email, password, formSubmitting, error } = this.state;
 
     return (
-      <form className="w-100" onSubmit={this.signIn}>
-        <div
-          className="d-flex justify-content-center flex-column position-relative border-left border-right border-dark"
-          style={{ height: "100vh" }}
+      <div>
+        <NavHeader />
+        <Container
+          fluid
+          style={{ backgroundColor: "white", flex: 1 }}
+          className="justify-content-center align-items-center  mt-5"
         >
-          <Row className="ml-2 mb-3 w-100 header">
-            {/* <FontAwesomeIcon
-              icon={faChevronLeft}
-              className="float-right ml-1 mt-3"
-              style={{ width: "25px", height: "25px", cursor: "pointer" }}
-              // onClick={ () => history.goBack() }/>
-            /> */}
+          <Row className="justify-content-center">
+            <h1>Home page</h1>
           </Row>
-
-          <h4
-            className="text-center mt-4 heading font-weight-light"
-            style={{ fontFamily: "Montserrat-Regular" }}
-          >
-            Proceed with your
-            <p style={{ fontFamily: "Montserrat-bold" }}>Login</p>
-          </h4>
-
-          <Container className="text-center mt-5">
-            <input
-              autoFocus
-              ref={this.emailRef}
-              className={`border-top-0 border-left-0 border-right-0 w-75 ${
-                error["type"] === "email" ? "border-danger" : ""
-              }`}
-              style={{ fontFamily: "Montserrat-Regular" }}
-              placeholder="email"
-              value={"email"}
-              onChange={e => this.changeText(e, "email")}
-            />
-
-            <input
-              ref={this.passwordRef}
-              type="password"
-              className={`border-top-0 border-left-0 border-right-0 mt-4 w-75 ${
-                error["type"] === "password" ? "border-danger" : ""
-              }`}
-              style={{ fontFamily: "Montserrat-Regular" }}
-              placeholder="password"
-              value={"password"}
-              onChange={e => this.changeText(e, "password")}
-            />
-
-            <p
-              className={`text-danger ${error["type"] === "" ? "d-none" : ""}`}
-            >
-              <small style={{ fontFamily: "Montserrat-Regular" }}>
-                {error["message"]}
-              </small>
-            </p>
-
-            <p className="text-right mr-4 p-3">
-              <small style={{ fontFamily: "Montserrat-Regular" }}>
-                Forgot password?
-              </small>
-            </p>
-
-            <div className="text-right mt-2 mr-4 p-2">
-              <button
-                className="bg-transparent text-dark border-0"
-                style={{ fontFamily: "Anton-Regular" }}
-              >
-                {/* {formSubmitting ? (
-                  <img src={SpinnerDark} alt="loading" width="40" height="40" />
-                ) : (
-                  "Login"
-                )} */}
-              </button>
-            </div>
-
-            <Link to={"/agents/signup"}>
-              <p>
-                <small style={{ fontFamily: "Montserrat-Regular" }}>
-                  Don't have an account?
-                </small>
-              </p>
-            </Link>
-          </Container>
-        </div>
-      </form>
+        </Container>
+      </div>
     );
   }
 }
