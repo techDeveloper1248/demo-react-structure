@@ -2,33 +2,25 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { Link } from "react-router-dom";
+import { Row, Container, Grid } from "react-bootstrap";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <Container className="App-header" fluid={true}>
+      <Link to={"/user/homePage"}>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <small
+            style={{
+              fontFamily: "Montserrat-Regular",
+              color: "black",
+              fontSize: 20
+            }}
+          >
+            Navigate to Home
+          </small>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-
-        <Link to={"/user/homePage"}>
-          <p>
-            <small style={{ fontFamily: "Montserrat-Regular" }}>
-              Navigate to home
-            </small>
-          </p>
-        </Link>
-      </header>
-    </div>
+      </Link>
+    </Container>
   );
 }
 

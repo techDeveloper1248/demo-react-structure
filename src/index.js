@@ -12,7 +12,7 @@ import * as serviceWorker from "./serviceWorker";
 ReactDOM.render(
   <React.StrictMode>
     {/* <Provider store={store}> */}
-    <Container className="justify-content-center" fluid>
+    <Container fluid className="pl-0 pr-0 justify-content-center">
       <div>
         <Routes />
       </div>
