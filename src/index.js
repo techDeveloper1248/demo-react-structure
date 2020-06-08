@@ -1,12 +1,23 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+import { Row, Container } from "react-bootstrap";
 import App from "./App";
+// import { Provider } from "react-redux";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Routes from "./routes";
+// import { store } from "./store";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* <Provider store={store}> */}
+    <Container className="justify-content-center" fluid>
+      <div>
+        <Routes />
+      </div>
+    </Container>
+    {/* </Provider> */}
   </React.StrictMode>,
   document.getElementById("root")
 );

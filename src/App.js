@@ -1,6 +1,7 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
@@ -18,6 +19,14 @@ function App() {
         >
           Learn React
         </a>
+
+        <Link to={"/user/homePage"}>
+          <p>
+            <small style={{ fontFamily: "Montserrat-Regular" }}>
+              Navigate to home
+            </small>
+          </p>
+        </Link>
       </header>
     </div>
   );
