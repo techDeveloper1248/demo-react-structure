@@ -120,7 +120,7 @@ class HomePage extends Component {
 
     return (
       <div>
-        <NavHeader />
+        <NavHeader props={this.props} />
         <Container
           fluid
           style={{ backgroundColor: "white", flex: 1 }}

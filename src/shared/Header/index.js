@@ -6,6 +6,8 @@ import { connect } from "react-redux";
 // import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 // import { SpinnerDark } from "../../../assets/img";
 import { Link } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
+import "./Header.scss";
 // let connectProps = {
 //   // ...AgentActions
 // };
@@ -38,8 +40,8 @@ class NavHeader extends Component {
   render() {
     const { history } = this.props;
 
-    const pathname = "/jobs";
-    console.log("---", history);
+    const pathname = this.props.props.location.pathname;
+
     return (
       <Container
         fluid
@@ -58,30 +60,61 @@ class NavHeader extends Component {
             Hacker News Feeds
           </Navbar.Brand>
 
-          <Nav className="ml-auto">
-            <Nav.Link href="#deets">News</Nav.Link>
-
-            <Nav.Link eventKey={2} href="#memes">
-              Newest
-            </Nav.Link>
-
-            <Nav.Link eventKey={2} href="#memes">
-              Ask
-            </Nav.Link>
-
-            <Nav.Link to="/show" activeClassName="font-weight-bold underline">
-              Show
-            </Nav.Link>
-
-            <Nav.Link
-              eventKey={2}
-              href="#memes"
-              className={`header-btn ml-1 underline ${
-                pathname === "/jobs" ? "text-white" : "text-dark"
+          <Nav className="ml-auto ">
+            <NavLink
+              to="/user/homePage"
+              className={`header-btn ${
+                pathname === "/user/homePage" || pathname === "/"
+                  ? "text-white font-weight-bold underline"
+                  : "text-dark"
               }`}
             >
-              Job
-            </Nav.Link>
+              News
+            </NavLink>
+
+            <NavLink
+              to="/user/Newest"
+              className={`header-btn ${
+                pathname === "/user/Newest"
+                  ? "text-white font-weight-bold underline"
+                  : "text-dark"
+              }`}
+            >
+              Newest
+            </NavLink>
+
+            <NavLink
+              to="/user/Ask"
+              className={`header-btn ${
+                pathname === "/user/Ask"
+                  ? "text-white font-weight-bold underline"
+                  : "text-dark"
+              }`}
+            >
+              Ask
+            </NavLink>
+
+            <NavLink
+              to="/user/Show"
+              className={`header-btn ${
+                pathname === "/user/Show"
+                  ? "text-white font-weight-bold underline"
+                  : "text-dark"
+              }`}
+            >
+              Show
+            </NavLink>
+
+            <NavLink
+              to="/user/Jobs"
+              className={`header-btn ${
+                pathname === "/user/Jobs"
+                  ? "text-white font-weight-bold underline"
+                  : "text-dark"
+              }`}
+            >
+              Jobs
+            </NavLink>
           </Nav>
         </Navbar>
       </Container>
