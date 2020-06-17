@@ -3,21 +3,21 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import { Row, Container } from "react-bootstrap";
 import App from "./App";
-// import { Provider } from "react-redux";
+import { Provider } from "react-redux";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Routes from "./routes";
-// import { store } from "./store";
+import { store } from "./store/index";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Provider store={store}> */}
-    <Container fluid className="pl-0 pr-0 justify-content-center">
-      <div>
-        <Routes />
-      </div>
-    </Container>
-    {/* </Provider> */}
+    <Provider store={store}>
+      <Container fluid className="pl-0 pr-0 justify-content-center">
+        <div>
+          <Routes />
+        </div>
+      </Container>
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );
