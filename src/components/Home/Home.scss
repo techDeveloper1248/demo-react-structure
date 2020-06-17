@@ -18,3 +18,10 @@
   align-items: center;
   width: 900px;
 }
+
+.active {
+  z-index: 2;
+  color: #000 !important;
+  background-color: white !important;
+  border-color: black !important;
+}

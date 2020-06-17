@@ -46,9 +46,10 @@ class NavHeader extends Component {
       <Container
         fluid
         style={{ backgroundColor: "#ffc108" }}
-        className="justify-content-xs-left"
+        className="justify-content-left"
+        // className="justify-content-start align-items-start align-items-sm-center justify-content-sm-between flex-column flex-sm-row"
       >
-        <Navbar variant="light" className="nav-bg">
+        <Navbar variant="light" className="nav-bg fixed-top back ">
           <Navbar.Brand href="#home">
             <img
               alt=""
@@ -60,7 +61,7 @@ class NavHeader extends Component {
             Hacker News Feeds
           </Navbar.Brand>
 
-          <Nav className="ml-auto ">
+          <Nav className="ml-auto">
             <NavLink
               to="/user/homePage"
               className={`header-btn ${
