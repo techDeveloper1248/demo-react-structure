@@ -2,14 +2,45 @@ import React from "react";
 import { Card, Row, Button, Container, Image, Col } from "react-bootstrap";
 import NavHeader from "../../shared/Header";
 import back from "../../assets/back.png";
+import wave from "../../assets/wave.png";
+import phone from "../../assets/phone.png";
+import appStore from "../../assets/appStore.png";
+import playStore from "../../assets/playStore.png";
 import "./Advertise.scss";
+
+const SingleCard = props => {
+  return (
+    <Card style={{ position: "relative" }}>
+      <div className="hover">
+        <Card.Img style={{ height: 250, zIndex: 2 }} variant="top" src={back} />
+      </div>
+
+      <Card.Body
+        className="border bg-white"
+        style={{
+          position: "absolute",
+          bottom: -30,
+          left: "5px",
+          right: "5px",
+          zIndex: 0
+        }}
+      >
+        <Card.Title>Nails</Card.Title>
+        <Card.Text style={{ maxWidth: "80%" }}>
+          Soak-off gel manicure, Paraffin manicure, Brazillian manicure, Shellac
+          manicure.
+        </Card.Text>
+      </Card.Body>
+    </Card>
+  );
+};
 
 const Advertise = props => {
   return (
     <div>
       <NavHeader props={props} />
 
-      <div class="image">
+      <div>
         <Image
           src={back}
           style={{ backgroundSize: "contain", width: "100%", height: "600px" }}
@@ -57,58 +88,63 @@ const Advertise = props => {
 
         <div className="scrollMenu">
           <Row>
-            <Card style={{ width: "18rem", borderRadius: 10 }}>
-              <Card.Img variant="top" src={back} />
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
-              </Card.Body>
-            </Card>
+            <SingleCard />
+            <SingleCard />
+            <SingleCard />
+            <SingleCard />
+            <SingleCard />
+          </Row>
+        </div>
+      </div>
 
-            <Card style={{ width: "18rem", borderRadius: 10 }}>
-              <Card.Img variant="top" src={back} />
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
-              </Card.Body>
-            </Card>
+      <div className="margin image">
+        <Image
+          src={wave}
+          style={{ backgroundSize: "contain", width: "100%", height: "400px" }}
+        />
 
-            <Card style={{ width: "18rem", borderRadius: 10 }}>
-              <Card.Img variant="top" src={back} />
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-            <Card style={{ width: "18rem", borderRadius: 10 }}>
-              <Card.Img variant="top" src={back} />
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-            <Card style={{ width: "18rem", borderRadius: 10 }}>
-              <Card.Img variant="top" src={back} />
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
-              </Card.Body>
-            </Card>
+        <Image
+          src={phone}
+          style={{
+            backgroundSize: "contain",
+            height: "400px",
+            position: "absolute",
+            top: "-20%",
+            left: "10%"
+          }}
+        />
+
+        <div className="play-store">
+          <Row className="justify-content-center">
+            <h3 className="text-white">
+              <span style={{ fontSize: 20 }}>GET THE</span> GROOMUR{" "}
+              <span style={{ fontSize: 20 }}>APP</span>
+            </h3>
+          </Row>
+          <h6 className="get-text">
+            PLEASE VIST APP STORE AND GOOGLE PLAY STORE TO DOWNLOAD GROOMUR APP
+          </h6>
+
+          <Row className="justify-content-center align-items-center">
+            <div className="zoom ">
+              <input
+                // id="image"
+                type="image"
+                width="160"
+                height="60"
+                src={appStore}
+              />
+            </div>
+
+            <div className="zoom" style={{ padding: 30 }}>
+              <input
+                // id="image"
+                type="image"
+                width="140"
+                height="40"
+                src={playStore}
+              />
+            </div>
           </Row>
         </div>
       </div>

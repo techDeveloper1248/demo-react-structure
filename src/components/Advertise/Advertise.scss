@@ -1,6 +1,8 @@
 .image {
   // height: 100px;
-  // width: 100%; /* for IE 6 */
+  width: 100%; /* for IE 6 */
+  position: relative;
+  min-height: 200px;
 }
 .image-dimension {
   height: 10px;
@@ -20,7 +22,7 @@ h2 {
 
 .border {
   border-radius: 10px;
-  box-shadow: 5px 5px 8px gray;
+  box-shadow: 5px 5px 8px rgb(177, 177, 177);
 }
 
 .card-height {
@@ -79,19 +81,50 @@ h2 {
     overflow-y: hidden;
   }
   .card {
-    /*float: left;*/
-    max-width: 33.333%;
     padding: 0.75rem;
     margin-bottom: 2rem;
     border: 0;
-    flex-basis: 33.333%;
+    flex-basis: 23.333%;
     flex-grow: 0;
     flex-shrink: 0;
   }
   .card > img {
-    margin-bottom: 0.75rem;
+    // margin-bottom: 0.75rem;
   }
   .card-text {
     font-size: 85%;
   }
+}
+.get-text {
+  color: white;
+  font-size: 12px;
+}
+
+.play-store {
+  position: absolute;
+  top: 20%;
+  right: 20%;
+}
+
+.zoom {
+  padding: 20px;
+  transition: transform 0.2s;
+  width: 200px;
+  height: 200px;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5);
+}
+
+.hover img {
+  transition: 0.5s ease;
+}
+
+.hover img:hover {
+  box-shadow: 0 0 0 5px #39648d;
+  transition: 0.5s ease;
+  border-radius: 5px;
 }
