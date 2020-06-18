@@ -35,6 +35,33 @@ const SingleCard = props => {
   );
 };
 
+const BottomCard = props => {
+  return (
+    <div style={{ position: "relative" }} className="pl-3">
+      <Image
+        style={{ height: 250, width: "300px", borderRadius: 10 }}
+        variant="top"
+        src={back}
+      />
+      <Card>
+        <Card.Body
+          className="border bg-white"
+          style={{
+            position: "absolute",
+            bottom: 0,
+            left: "20px",
+            right: "20px",
+            zIndex: 0
+          }}
+        >
+          <Card.Title>Nails</Card.Title>
+          <Card.Text>Non-toxic Pedicure and Manicure</Card.Text>
+        </Card.Body>
+      </Card>
+    </div>
+  );
+};
+
 const Advertise = props => {
   return (
     <div>
@@ -109,7 +136,7 @@ const Advertise = props => {
             backgroundSize: "contain",
             height: "400px",
             position: "absolute",
-            top: "-20%",
+            top: "-5%",
             left: "10%"
           }}
         />
@@ -146,6 +173,21 @@ const Advertise = props => {
               />
             </div>
           </Row>
+        </div>
+
+        <div className="ml-5 mr-5  margin">
+          <h4>FEATURED SERVICE PROFESSIONALS</h4>
+
+          <div className="scrollMenu">
+            <Row>
+              <BottomCard />
+              <BottomCard />
+              <BottomCard />
+              <BottomCard />
+              <BottomCard />
+              <BottomCard />
+            </Row>
+          </div>
         </div>
       </div>
     </div>
