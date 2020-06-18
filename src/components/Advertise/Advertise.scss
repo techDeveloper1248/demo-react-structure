@@ -1,0 +1,97 @@
+.image {
+  // height: 100px;
+  // width: 100%; /* for IE 6 */
+}
+.image-dimension {
+  height: 10px;
+  width: 100%; /* for IE 6 */
+}
+
+h2 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.border {
+  border-radius: 10px;
+  box-shadow: 5px 5px 8px gray;
+}
+
+.card-height {
+  position: absolute;
+  bottom: 12%;
+  width: 100%;
+}
+
+.card-padding {
+  padding: 0.5rem;
+}
+
+.card-text {
+  font-size: 14px;
+  padding: 0rem;
+  margin: 0rem;
+}
+.vertical {
+  width: 2px;
+  height: 100%;
+  background-color: yellowgreen;
+}
+
+.button {
+  background-color: #fd6163; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.button1 {
+  background-color: #fd6163;
+}
+.button1:hover {
+  background-color: #4caf50;
+  color: white;
+}
+.margin {
+  margin-top: 100px;
+}
+.scrollMenu {
+  .row {
+    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  .card {
+    /*float: left;*/
+    max-width: 33.333%;
+    padding: 0.75rem;
+    margin-bottom: 2rem;
+    border: 0;
+    flex-basis: 33.333%;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  .card > img {
+    margin-bottom: 0.75rem;
+  }
+  .card-text {
+    font-size: 85%;
+  }
+}

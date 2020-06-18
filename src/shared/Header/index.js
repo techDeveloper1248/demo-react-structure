@@ -74,14 +74,14 @@ class NavHeader extends Component {
             </NavLink>
 
             <NavLink
-              to="/user/Newest"
+              to="/advertise"
               className={`header-btn ${
-                pathname === "/user/Newest"
+                pathname === "/advertise"
                   ? "text-white font-weight-bold underline"
                   : "text-dark"
               }`}
             >
-              Newest
+              Advertise
             </NavLink>
 
             <NavLink

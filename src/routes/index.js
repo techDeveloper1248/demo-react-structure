@@ -1,6 +1,7 @@
 import React from "react";
 import App from "../App";
 import HomePage from "../components/Home";
+import Advertise from "../components/Advertise";
 import {
   BrowserRouter as Router,
   Switch,
@@ -52,10 +53,18 @@ const Routes = () => {
     <Router>
       <Switch>
         <PublicRoute restricted={true} component={App} path="/" exact />
+
         <PublicRoute
           restricted={true}
           component={HomePage}
           path="/user/homePage"
+          exact
+        />
+
+        <PublicRoute
+          restricted={true}
+          component={Advertise}
+          path="/advertise"
           exact
         />
         {/* <PublicRoute restricted={ true } component={ UserSignUp }  path="/users/signup" exact />
