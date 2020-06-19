@@ -1,0 +1,82 @@
+.form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.form-control-placeholder {
+  position: absolute;
+  top: 0;
+  padding: 8px 0 0 13px;
+  transition: all 200ms;
+  opacity: 1 !important;
+}
+
+.form-control:focus + .form-control-placeholder,
+.form-control:valid + .form-control-placeholder {
+  font-size: 75%;
+  transform: translate3d(0, -100%, 0);
+  opacity: 1;
+  color: black;
+}
+
+.card-rounded {
+  border-radius: 25px;
+}
+.text-heading {
+  color: #fd6163;
+}
+
+.btn {
+  background: #fd6163;
+  border: #fd6163;
+  border-radius: 10px;
+}
+
+.bg-dark-blue {
+  background-color: #4065b4;
+}
+
+.bg-light-blue {
+  background-color: #5698d4;
+}
+
+.modal-close-btn {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+.container-top {
+  display: flex;
+  flex-direction: column;
+  margin-top: 120px;
+  min-height: 100vh;
+}
+
+.margin {
+  margin-top: 100px;
+}
+
+.form-control {
+  // border: 0 !important;
+  outline: none !important;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus {
+  border-color: black;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px gray;
+  outline: 0 none;
+}
+
+.button-shadow {
+  border-color: gray;
+  border-style: solid;
+  opacity: 0.9;
+  border-width: 1px;
+  border-radius: 5px;
+
+  // box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px gray;
+}
